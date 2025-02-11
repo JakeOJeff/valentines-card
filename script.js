@@ -1,13 +1,10 @@
-// Get URL parameters
 const urlParams = new URLSearchParams(window.location.search);
-const name = urlParams.get('n') || 'love'; // Default to "Valentine" if no name is provided
-const customText = urlParams.get('t') || 'YAY!! You made my heart skip a beat! 💖'; // Default text if none is provided
+const name = urlParams.get('n') || 'love';
+const customText = urlParams.get('t') || 'YAY!! You made my heart skip a beat! 💖'; /
 
-// Set the name and final message
 document.getElementById('name').textContent = name;
 document.getElementById('final-message').textContent = customText;
 
-// DOM elements
 const yesBtn = document.getElementById('yes');
 const noBtn = document.getElementById('no');
 const response = document.getElementById('response');
@@ -15,7 +12,7 @@ const response = document.getElementById('response');
 // Love-themed color palette
 const colors = ['#ff4d6d', '#ffcccb', '#ffafcc', '#ff6b6b', '#ffdde1'];
 
-// Chaos events
+// events when love thing
 const events = [
     () => { // Confetti explosion from button
         explodeConfetti(noBtn.getBoundingClientRect());
@@ -144,7 +141,7 @@ function spawnLoveTexts() {
     setTimeout(() => loveText.remove(), 3000);
 }
 
-// Add bounce animation
+// Add bounce
 const style = document.createElement('style');
 style.textContent = `
 @keyframes bounce {
