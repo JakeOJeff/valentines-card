@@ -1,1 +1,120 @@
+body {
+    background: #ffdde1;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    font-family: 'Comic Sans MS', cursive;
+    overflow: hidden;
+      -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+.container {
+    text-align: center;
+    position: relative;
+}
+
+h1 {
+    color: #ff4d6d;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(255, 77, 109, 0.3);
+    z-index: 10; /* Ensure text stays on top */
+      -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+.btn {
+    padding: 15px 30px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 10px;
+    transition: 0.3s;
+      -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+.yes {
+    background: #ff4d6d;
+    color: white;
+      -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+.no {
+    background: #fff;
+    color: #ff4d6d;
+    border: 2px solid #ff4d6d;
+      -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+.hidden {
+    display: none;
+}
+
+/* Chaos elements */
+.chaos-emoji {
+    position: absolute;
+    font-size: 30px;
+    animation: float 3s infinite;
+    z-index: 1; /* Behind the main text */
+      -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(360deg); }
+}
+
+.happy-cat {
+    width: 200px;
+    margin-top: 20px;
+    filter: drop-shadow(0 0 10px pink);
+      -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+/* Heart rain */
+.heart {
+    position: absolute;
+    font-size: 24px;
+    color: #ff4d6d;
+    animation: fall linear infinite;
+      -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+/* Random love texts */
+.love-text {
+    position: absolute;
+    font-size: 24px;
+    color: #ff4d6d;
+    animation: float 3s infinite;
+    z-index: 1; /* Behind the main text */
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(360deg); }
+}
+
+@keyframes fall {
+    to { transform: translateY(100vh); }
+}
 
