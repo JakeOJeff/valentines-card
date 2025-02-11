@@ -1,1 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Card Creator</title>
+    <style>
+        body {
+            background: #ffdde1;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            font-family: 'Comic Sans MS', cursive;
+            overflow: hidden;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        .container {
+            text-align: center;
+            position: relative;
+        }
+        h2 {
+            color: #ff4d6d;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(255, 77, 109, 0.3);
+            z-index: 10;
+        }
+        input, button {
+            margin: 10px;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 10px;
+            border: 2px solid #ff4d6d;
+            outline: none;
+        }
+        input {
+            background: white;
+            color: #ff4d6d;
+            text-align: center;
+        }
+        .btn {
+            padding: 15px 30px;
+            font-size: 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            margin: 10px;
+            transition: 0.3s;
+        }
+        .yes {
+            background: #ff4d6d;
+            color: white;
+        }
+        .no {
+            background: #fff;
+            color: #ff4d6d;
+            border: 2px solid #ff4d6d;
+        }
+        #output {
+            margin-top: 20px;
+            font-weight: bold;
+            background: white;
+            padding: 10px;
+            width: 80%;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Card Creator (By @JakeOJeff )</h2>
+        <label for="name">Recipient Name:</label>
+        <input type="text" id="name" placeholder="Jake">
+        <br>
+        <label for="sentence">Response to Yes:</label>
+        <input type="text" id="sentence" placeholder="Let's go get tacos!">
+        <br>
+        <button class="btn yes" onclick="generateURL()">Create</button>
+        <br>
+        <input type="text" id="output" readonly>
+        <button class="btn no" onclick="copyURL()">Copy</button>
+    </div>
+    
+    <script>
+        function generateURL() {
+            let name = document.getElementById('name').value;
+            let sentence = document.getElementById('sentence').value;
+            
+            let encodedName = encodeURIComponent(name);
+            let encodedSentence = encodeURIComponent(sentence);
+            
+        let url = `${window.location.origin}/?n=${encodedName}&t=${encodedSentence}`;
+            document.getElementById('output').value = url;
+        }
+
+        function copyURL() {
+            let output = document.getElementById('output');
+            output.select();
+            document.execCommand('copy');
+            alert('URL copied to clipboard!');
+        }
+    </script>
+</body>
+</html>
 
